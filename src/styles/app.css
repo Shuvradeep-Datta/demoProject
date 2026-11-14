@@ -891,6 +891,59 @@ a:hover {
   * { transition: none !important; animation: none !important; }
 }
 
+/* ── WhatsApp floating action button ──────────────────────── */
+.wa-fab {
+  position: fixed;
+  right: 20px;
+  bottom: calc(var(--sz-statusbar) + 16px);
+  width: 54px;
+  height: 54px;
+  border-radius: 50%;
+  background: #25d366;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 90;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.35);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+  text-decoration: none;
+  animation: waPulse 2.6s ease-out infinite;
+}
+.wa-fab:hover {
+  transform: scale(1.08);
+  box-shadow: 0 6px 20px rgba(37, 211, 102, 0.45);
+  text-decoration: none;
+}
+.wa-fab:active { transform: scale(0.96); }
+.wa-fab .wa-tooltip {
+  position: absolute;
+  right: 66px;
+  background: var(--bg-elevated);
+  color: var(--text-strong);
+  border: 1px solid var(--border-strong);
+  padding: 6px 10px;
+  border-radius: 6px;
+  font-size: 12px;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateX(6px);
+  transition: opacity 0.15s ease, transform 0.15s ease;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+.wa-fab:hover .wa-tooltip { opacity: 1; transform: translateX(0); }
+
+@keyframes waPulse {
+  0% { box-shadow: 0 4px 14px rgba(0, 0, 0, 0.35), 0 0 0 0 rgba(37, 211, 102, 0.5); }
+  70% { box-shadow: 0 4px 14px rgba(0, 0, 0, 0.35), 0 0 0 14px rgba(37, 211, 102, 0); }
+  100% { box-shadow: 0 4px 14px rgba(0, 0, 0, 0.35), 0 0 0 0 rgba(37, 211, 102, 0); }
+}
+
+@media (max-width: 720px) {
+  .wa-fab { width: 48px; height: 48px; right: 14px; bottom: calc(var(--sz-statusbar) + 12px); }
+  .wa-fab .wa-tooltip { display: none; }
+}
+
 /* Fade-in for opened documents */
 @keyframes fadeUp {
   from { opacity: 0; transform: translateY(6px); }

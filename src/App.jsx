@@ -8,6 +8,7 @@ import Editor from './components/Editor/Editor.jsx'
 import Terminal from './components/Terminal/Terminal.jsx'
 import StatusBar from './components/StatusBar/StatusBar.jsx'
 import CommandPalette from './components/CommandPalette/CommandPalette.jsx'
+import WhatsAppButton from './components/WhatsAppButton/WhatsAppButton.jsx'
 
 export default function App() {
   const ws = useWorkspace()
@@ -30,6 +31,7 @@ export default function App() {
       </div>
       <StatusBar />
       <CommandPalette />
+      <WhatsAppButton />
     </div>
   )
 }
