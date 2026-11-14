@@ -34,9 +34,13 @@ jobs:
         run: npm ci
 
       - name: Build
-        # Sets Vite `base` to "/<repo-name>/" so assets resolve on project Pages.
+        # Custom domain (www.shuvradeepdatta.in) serves the site from the domain
+        # root, so the Vite `base` must be "/". The public/CNAME file binds the
+        # domain on every deploy.
+        # (For project-path hosting without a custom domain, use
+        #  VITE_BASE: /${{ github.event.repository.name }}/ instead.)
         env:
-          VITE_BASE: /${{ github.event.repository.name }}/
+          VITE_BASE: /
         run: npm run build
 
       - name: Upload Pages artifact
