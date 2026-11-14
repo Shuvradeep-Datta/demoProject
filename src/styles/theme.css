@@ -1,0 +1,107 @@
+/* ───────────────────────────────────────────────────────────
+   Theme tokens. Dark is the default (VS Code "Dark+"-inspired).
+   Light theme mirrors VS Code "Light+". Toggled via data-theme
+   attribute on <html>.
+   ─────────────────────────────────────────────────────────── */
+
+:root,
+:root[data-theme='dark'] {
+  color-scheme: dark;
+
+  --bg-app: #1e1e1e;
+  --bg-activitybar: #333333;
+  --bg-sidebar: #252526;
+  --bg-editor: #1e1e1e;
+  --bg-tabs: #252526;
+  --bg-tab-active: #1e1e1e;
+  --bg-tab-inactive: #2d2d2d;
+  --bg-statusbar: #007acc;
+  --bg-terminal: #181818;
+  --bg-panel-header: #252526;
+  --bg-input: #3c3c3c;
+  --bg-hover: #2a2d2e;
+  --bg-active-selection: #094771;
+  --bg-overlay: rgba(0, 0, 0, 0.55);
+  --bg-card: #252526;
+  --bg-elevated: #2d2d30;
+
+  --border: #3c3c3c;
+  --border-strong: #464647;
+  --border-subtle: #2b2b2b;
+
+  --text: #cccccc;
+  --text-strong: #ffffff;
+  --text-muted: #8a8a8a;
+  --text-dim: #6a6a6a;
+
+  --accent: #007acc;
+  --accent-hover: #1b8bd0;
+  --focus-ring: #007fd4;
+
+  --scroll-thumb: #4a4a4a;
+
+  /* Syntax palette */
+  --tok-keyword: #569cd6;
+  --tok-string: #ce9178;
+  --tok-number: #b5cea8;
+  --tok-prop: #9cdcfe;
+  --tok-func: #dcdcaa;
+  --tok-type: #4ec9b0;
+  --tok-comment: #6a9955;
+  --tok-punct: #d4d4d4;
+  --tok-bool: #569cd6;
+
+  --heading: #4ec9b0;
+  --link: #4daafc;
+  --code-bg: #2a2a2a;
+}
+
+:root[data-theme='light'] {
+  color-scheme: light;
+
+  --bg-app: #ffffff;
+  --bg-activitybar: #2c2c2c;
+  --bg-sidebar: #f3f3f3;
+  --bg-editor: #ffffff;
+  --bg-tabs: #ececec;
+  --bg-tab-active: #ffffff;
+  --bg-tab-inactive: #ececec;
+  --bg-statusbar: #007acc;
+  --bg-terminal: #f8f8f8;
+  --bg-panel-header: #f3f3f3;
+  --bg-input: #ffffff;
+  --bg-hover: #e8e8e8;
+  --bg-active-selection: #cde6f7;
+  --bg-overlay: rgba(0, 0, 0, 0.35);
+  --bg-card: #f8f8f8;
+  --bg-elevated: #ffffff;
+
+  --border: #e0e0e0;
+  --border-strong: #c8c8c8;
+  --border-subtle: #ededed;
+
+  --text: #333333;
+  --text-strong: #1a1a1a;
+  --text-muted: #6a6a6a;
+  --text-dim: #8a8a8a;
+
+  --accent: #007acc;
+  --accent-hover: #1b8bd0;
+  --focus-ring: #007fd4;
+
+  --scroll-thumb: #c4c4c4;
+
+  --tok-keyword: #0000ff;
+  --tok-string: #a31515;
+  --tok-number: #098658;
+  --tok-prop: #0451a5;
+  --tok-func: #795e26;
+  --tok-type: #267f99;
+  --tok-comment: #008000;
+  --tok-punct: #333333;
+  --tok-bool: #0000ff;
+
+  --heading: #267f99;
+  --link: #006ab1;
+  --code-bg: #f0f0f0;
+}
