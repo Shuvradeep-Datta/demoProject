@@ -29,7 +29,7 @@ export const profile = {
     // WhatsApp number in full international format, digits only — country code,
     // no '+', spaces or dashes. e.g. India: '9198XXXXXXXX'. Powers the floating
     // WhatsApp button (bottom-right). Leave empty to hide the button.
-    whatsapp: { value: '916296504270', placeholder: false },
+    whatsapp: { value: '916296012345', placeholder: false },
     linkedin: { value: 'https://www.linkedin.com/in/your-handle', placeholder: true },
     github: { value: 'https://github.com/your-handle', placeholder: true },
     // Known public identifiers from the brief (used only where you provided them):
